@@ -108,6 +108,7 @@ jobs:
           path: turbine
   
   e2eshark:
+    needs: [torch-mlir, iree, turbine]
     runs-on: ubuntu-latest
     env:
       E2E_VENV_DIR: ${{ github.workspace }}/test-suite_venv
